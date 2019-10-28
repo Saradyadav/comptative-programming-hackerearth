@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,x,i;
+    scanf("%d",&a);
+    for(x=1;x<=a;x++)
+    {
+        for(i=2;i<x;i++)
+        {
+            if(x%i==0)
+            break;
+        }
+        if(i==x)
+        {
+            printf("% d",x);
+        }
+        
+    }
+    return 0;
+}
