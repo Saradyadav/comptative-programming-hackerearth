@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+    char a[10000],b[10000];
+    int t,i,c=0,sum=0,n;
+
+    scanf("%d",&t);
+    while(t--)
+    {
+            int s1[26]={0},s2[26]={0};
+        scanf("%s",a);
+        scanf("%s",b);
+        c=0;
+        while(a[c]!='\0')
+        {
+            s1[a[c]-'a']++;
+            c++;
+        }
+        c=0;
+        while(b[c]!='\0')
+        {
+            s2[b[c]-'a']++;
+            c++;
+        }
+        sum=0;
+        for(c=0;c<26;c++)
+        {
+           
+            sum=sum+abs(s1[c]-s2[c]);
+        }
+        printf("%d\n",sum);
+    }
+    return 0;
+}
